@@ -4,7 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
@@ -23,7 +24,7 @@ import com.google.inject.Singleton;
 @Singleton
 public class SpawnData implements ISpawnData
 {
-	private static final Logger LOGGER = Logger.getLogger(SpawnData.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(SpawnData.class.getName());
 	private static final String RESTORE_SPAWNS = "SELECT * FROM spawnlist";
 	
 	@Inject

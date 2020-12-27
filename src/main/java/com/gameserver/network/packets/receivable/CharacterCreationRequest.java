@@ -174,9 +174,9 @@ public class CharacterCreationRequest implements IRequestHandler
 			ps.setFloat(13, Config.STARTING_LOCATION.getY());
 			ps.setFloat(14, Config.STARTING_LOCATION.getZ());
 			ps.setFloat(15, Config.STARTING_LOCATION.getHeading());
-			ps.setLong(16, 0); // TODO: Starting level experience.
-			ps.setLong(17, 1); // TODO: Character stats HP.
-			ps.setLong(18, 1); // TODO: Character stats MP.
+			ps.setLong(16, 1); // TODO: Starting level experience.
+			ps.setLong(17, 100); // TODO: Character stats HP.
+			ps.setLong(18, 100); // TODO: Character stats MP.
 			ps.execute();
 		}
 		catch (Exception e)

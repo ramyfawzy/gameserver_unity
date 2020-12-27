@@ -1,9 +1,9 @@
 package com.gameserver;
 
 import java.awt.Toolkit;
-import java.io.File;
 import java.util.Map;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -24,14 +24,13 @@ import com.gameserver.network.packets.receivable.IRequestHandler;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
-import com.google.inject.multibindings.MapBinder;
 
 /**
  * @author Ramy Ibrahim
  */
 public class GameServer
 {
-	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(GameServer.class.getName());
 	
 	@Inject
 	IDatabaseManager databaseManager;
@@ -61,51 +60,37 @@ public class GameServer
 	
 	private void run() throws Exception{
 		
-		// Create log folder.
-		final File logFolder = new File(".", "log");
-		logFolder.mkdir();
-		clientRequestHandlers.entrySet().forEach(System.out::println);
-		// Create input stream for log file.
-//		try (InputStream is = new FileInputStream(new File("./gameserver/log.cfg")))
-//		{
-//			LogManager.getLogManager().readConfiguration(is);
-//		}
-		
 		// Keep start time for later.
 		final long serverLoadStart = System.currentTimeMillis();
 		
-		printSection("Configs");
+		LOGGER.info("Loading configs ...");
 		Config.load();
-//		databaseManager = injector.getInstance(IDatabaseManager.class);
-		printSection("Database");
+		
+		LOGGER.info("Initializing Database ...");
 		databaseManager.init();
 		
+		LOGGER.info("Initializing World ...");
 		WorldManager.init();
 		
-		printSection("Encryption");
+		LOGGER.info("Initializing Encryption ...");
 		Encryption.init();
 		
-		printSection("ThreadPool");
+		LOGGER.info("Initializing ThreadPool ...");
 		ThreadPoolManager.init();
 		
-		printSection("Skills");
-//		skillData = injector.getInstance(ISkillData.class);
+		LOGGER.info("Initializing Skills ...");
 		skillData.init();
 		
-		printSection("Items");
-//		itemData = injector.getInstance(IItemData.class);
+		LOGGER.info("Initializing Items ...");
 		itemData.init();
 		
-		printSection("NPCs");
-//		npcData = injector.getInstance(INpcData.class);
+		LOGGER.info("Initializing NPCs ...");
 		npcData.init();
 		
-		printSection("spawnData");
-//		spawnData = injector.getInstance(ISpawnData.class);
+		LOGGER.info("Initializing Spawn Data ...");
 		spawnData.init();
 		
 		// Post info.
-		printSection("Info");
 		LOGGER.info("Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		System.gc();
 		LOGGER.info("Started, using " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " of " + (Runtime.getRuntime().maxMemory() / 1048576) + " MB total memory.");
@@ -122,15 +107,5 @@ public class GameServer
 		
 		// Notify sound.
 		Toolkit.getDefaultToolkit().beep();
-	}
-	
-	private void printSection(String s)
-	{
-		s = "=[ " + s + " ]";
-		while (s.length() < 62)
-		{
-			s = "-" + s;
-		}
-		LOGGER.info(s);
 	}
 }

@@ -16,7 +16,6 @@ import org.apache.logging.log4j.LogManager;
 public class TargetUpdateRequest implements IRequestHandler {
 	@Override
 	public void handle(GameClient client, ReceivablePacket packet) {
-		System.out.println("TargetUpdateRequest LONGGG");
 		// Read data.
 		long targetObjectId = packet.readLong();
 

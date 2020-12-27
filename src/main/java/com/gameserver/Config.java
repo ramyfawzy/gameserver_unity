@@ -5,7 +5,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.model.holders.LocationHolder;
 import com.gameserver.util.ConfigReader;
@@ -19,15 +20,13 @@ public final class Config
 	// --------------------------------------------------
 	// Constants
 	// --------------------------------------------------
-	private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(Config.class.getName());
 	public static final String EOL = System.lineSeparator();
 	
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
 	private static final String ACCOUNT_CONFIG_FILE = "gameserver/config/Account.ini";
-	// private static final String DATABASE_CONFIG_FILE = "./config/Database.ini";
-	private static final String LOGGING_CONFIG_FILE = "gameserver/config/Logging.ini";
 	private static final String NETWORK_CONFIG_FILE = "gameserver/config/Network.ini";
 	private static final String PLAYER_CONFIG_FILE = "gameserver/config/Player.ini";
 	private static final String WORLD_CONFIG_FILE = "gameserver/config/World.ini";
@@ -93,15 +92,6 @@ public final class Config
 	
 	public static void load()
 	{
-		Util.printSection("Configs");
-		
-		// Initialize first so we can use logs as configured.
-		ConfigReader loggingConfigs = new ConfigReader(LOGGING_CONFIG_FILE);
-		LOG_FILE_SIZE_LIMIT_ENABLED = loggingConfigs.getBoolean("LogFileSizeLimitEnabled", false);
-		LOG_FILE_SIZE_LIMIT = loggingConfigs.getLong("LogFileSizeLimit", 1073741824);
-		LOG_CHAT = loggingConfigs.getBoolean("LogChat", true);
-		LOG_WORLD = loggingConfigs.getBoolean("LogWorld", true);
-		LOG_ADMIN = loggingConfigs.getBoolean("LogAdmin", true);
 		
 		ConfigReader accountConfigs = new ConfigReader(ACCOUNT_CONFIG_FILE);
 		ACCOUNT_AUTO_CREATE = accountConfigs.getBoolean("AccountAutoCreate", false);

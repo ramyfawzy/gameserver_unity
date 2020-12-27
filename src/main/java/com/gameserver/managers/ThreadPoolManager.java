@@ -6,7 +6,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.Config;
 
@@ -15,7 +16,7 @@ import com.gameserver.Config;
  */
 public final class ThreadPoolManager
 {
-	private static final Logger LOGGER = Logger.getLogger(ThreadPoolManager.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(ThreadPoolManager.class.getName());
 	
 	private static ScheduledThreadPoolExecutor[] SCHEDULED_POOLS = new ScheduledThreadPoolExecutor[Config.SCHEDULED_THREAD_POOL_COUNT];
 	private static ThreadPoolExecutor[] INSTANT_POOLS = new ThreadPoolExecutor[Config.INSTANT_THREAD_POOL_COUNT];

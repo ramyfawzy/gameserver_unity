@@ -1,7 +1,8 @@
 package com.gameserver.network;
 
 import java.util.Map;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,29 +11,14 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import com.gameserver.enums.ClientRequestType;
 import com.gameserver.managers.WorldManager;
 import com.gameserver.model.actor.Player;
-import com.gameserver.network.packets.receivable.AccountAuthenticationRequest;
-import com.gameserver.network.packets.receivable.AnimatorUpdateRequest;
-import com.gameserver.network.packets.receivable.CharacterCreationRequest;
-import com.gameserver.network.packets.receivable.CharacterDeletionRequest;
-import com.gameserver.network.packets.receivable.CharacterSelectUpdate;
-import com.gameserver.network.packets.receivable.CharacterSelectionInfoRequest;
-import com.gameserver.network.packets.receivable.CharacterSlotUpdate;
-import com.gameserver.network.packets.receivable.ChatRequest;
-import com.gameserver.network.packets.receivable.EnterWorldRequest;
-import com.gameserver.network.packets.receivable.ExitWorldRequest;
 import com.gameserver.network.packets.receivable.IRequestHandler;
-import com.gameserver.network.packets.receivable.LocationUpdateRequest;
-import com.gameserver.network.packets.receivable.ObjectInfoRequest;
-import com.gameserver.network.packets.receivable.PlayerOptionsUpdate;
-import com.gameserver.network.packets.receivable.TargetUpdateRequest;
-import com.google.inject.Inject;
 
 /**
  * @author Ramy Ibrahim
  */
 public class GameClient extends SimpleChannelInboundHandler<byte[]>
 {
-	private static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(GameClient.class.getName());
 	
 	private Channel _channel;
 	private String _ip;
@@ -80,85 +66,70 @@ public class GameClient extends SimpleChannelInboundHandler<byte[]>
 		switch (packet.readShort()) // Packet id.
 		{
 			case 1:
-//				new AccountAuthenticationRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.ACCOUNT_AUTHENTICATION.name()).handle(this, packet);
 				break;
 			
 			case 2:
-//				new CharacterSelectionInfoRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHARACTER_SELECTION_INFO.name()).handle(this, packet);
 				break;
 			
 			case 3:
-//				new CharacterCreationRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHARACTER_CREATION.name()).handle(this, packet);
 				break;
 			
 			case 4:
-//				new CharacterDeletionRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHARACTER_DELETION.name()).handle(this, packet);
 				break;
 			
 			case 5:
-//				new CharacterSlotUpdate(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHARACTER_SLOT_UPDATE.name()).handle(this, packet);
 				break;
 			
 			case 6:
-//				new CharacterSelectUpdate(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHARACTER_SELECT_UPDATE.name()).handle(this, packet);
 				break;
 			
 			case 7:
-//				new EnterWorldRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.ENTER_WORLD.name()).handle(this, packet);
 				break;
 			
 			case 8:
-//				new ExitWorldRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.EXIT_WORLD.name()).handle(this, packet);
 				break;
 			
 			case 9:
-//				new LocationUpdateRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.LOCATION_UPDATE.name()).handle(this, packet);
 				break;
 			
 			case 10:
-//				new AnimatorUpdateRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.ANIMATOR_UPDATE.name()).handle(this, packet);
 				break;
 			
 			case 11:
-//				new ObjectInfoRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.OBJECT_INFO.name()).handle(this, packet);
 				break;
 			
 			case 12:
-//				new PlayerOptionsUpdate(client, packet);
 				clientRequestHandlers.get(ClientRequestType.PLAYER_OPTIONS_UPDATE.name()).handle(this, packet);
 				break;
 			
 			case 13:
-//				new ChatRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.CHAT_REQUEST.name()).handle(this, packet);
 				break;
 			
 			case 14:
-//				new TargetUpdateRequest(client, packet);
 				clientRequestHandlers.get(ClientRequestType.TARGET_UPDATE.name()).handle(this, packet);
 				break;
 			default:
-				System.err.println("Undefined Request !! " + packet.readString());
+				LOGGER.error("Undefined Request -> {}", packet);
 				break;
 		}
-//		GameClientPacketHandler.handle(this, new ReceivablePacket(Encryption.decrypt(bytes)));
 	}
 	
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 	{
-		cause.printStackTrace();
+		LOGGER.error("Exception in Client network channel {}", cause.getMessage());
 	}
 	
 	@Override
@@ -166,7 +137,7 @@ public class GameClient extends SimpleChannelInboundHandler<byte[]>
 	{
 		// Disconnected.
 		WorldManager.removeClient(this);
-		LOGGER.finer("Client Disconnected: " + ctx.channel());
+		LOGGER.debug("Client Disconnected: {}", ctx.channel());
 	}
 	
 	public String getIp()

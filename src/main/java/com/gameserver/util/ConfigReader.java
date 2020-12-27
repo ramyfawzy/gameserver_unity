@@ -1,15 +1,15 @@
 package com.gameserver.util;
 
-import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Ramy Ibrahim
  */
 public final class ConfigReader
 {
-	private static final Logger LOGGER = Logger.getLogger(ConfigReader.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(ConfigReader.class.getName());
 	
 	private final Properties _properties = new Properties();
 	private final String _fileName;
@@ -21,11 +21,10 @@ public final class ConfigReader
 		{
 			var inputStream = getClass().getClassLoader().getResourceAsStream(_fileName);
 			_properties.load(inputStream);
-//			_properties.load(new FileInputStream(fileName));
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not load " + fileName + ". " + e.getMessage());
+			LOGGER.error("Could not load {} {}", fileName, e.getMessage());
 		}
 	}
 	
@@ -33,7 +32,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		return _properties.getProperty(config);
@@ -43,7 +42,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		
@@ -53,7 +52,7 @@ public final class ConfigReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Config " + config + " from file " + _fileName + " should be Boolean. Using default value " + defaultValue + " instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 	}
@@ -62,7 +61,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		
@@ -72,7 +71,7 @@ public final class ConfigReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Config " + config + " from file " + _fileName + " should be Integer. Using default value " + defaultValue + " instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 	}
@@ -81,7 +80,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		
@@ -91,7 +90,7 @@ public final class ConfigReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Config " + config + " from file " + _fileName + " should be Long. Using default value " + defaultValue + " instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 	}
@@ -100,7 +99,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		
@@ -110,7 +109,7 @@ public final class ConfigReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Config " + config + " from file " + _fileName + " should be Float. Using default value " + defaultValue + " instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 	}
@@ -119,7 +118,7 @@ public final class ConfigReader
 	{
 		if (!_properties.containsKey(config))
 		{
-			LOGGER.warning("Missing config " + config + " from file " + _fileName + ". Default value " + defaultValue + " will be used instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 		
@@ -129,7 +128,7 @@ public final class ConfigReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Config " + config + " from file " + _fileName + " should be Double. Using default value " + defaultValue + " instead.");
+			LOGGER.warn("Missing config {} from file {}. Default value {} will be used instead.", config, _fileName , defaultValue);
 			return defaultValue;
 		}
 	}

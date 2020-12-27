@@ -2,8 +2,8 @@ package com.gameserver.managers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.Config;
 import com.gameserver.model.WorldObject;
@@ -18,7 +18,7 @@ import com.gameserver.util.Util;
  */
 public class WorldManager
 {
-	private static final Logger LOGGER = Logger.getLogger(WorldManager.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(WorldManager.class.getName());
 	private static int VISIBILITY_RADIUS = 10000;
 	private static int MOVEMENT_BROADCAST_RADIUS = VISIBILITY_RADIUS + 100; // Need the extra distance to send location of objects getting out of range.
 	private static double REGION_RADIUS = Math.sqrt(VISIBILITY_RADIUS);
@@ -30,8 +30,6 @@ public class WorldManager
 	
 	public static void init()
 	{
-		Util.printSection("World");
-		
 		// Initialize regions.
 		for (int x = 0; x < REGION_SIZE_X; x++)
 		{
@@ -39,7 +37,6 @@ public class WorldManager
 			for (int z = 0; z < REGION_SIZE_Z; z++)
 			{
 				REGIONS[x][z] = new RegionHolder(x, z);
-				System.out.println("Region " + REGIONS[x][z].getX() + " , " + REGIONS[x][z].getZ());
 			}
 		}
 		
@@ -65,12 +62,11 @@ public class WorldManager
 					}
 				}
 				REGIONS[x][z].setSurroundingRegions(surroundingRegions);
-				LOGGER.log(Level.INFO, "Surrounding Regions for " + REGIONS[x][z] + " are " + surroundingRegions);
 				
 			}
 		}
 		
-		LOGGER.log(Level.INFO, "WorldManager: Initialized " + REGION_SIZE_X + " by " + REGION_SIZE_Z + " regions.");
+		LOGGER.info("WorldManager: Initialized {} by {} regions.", REGION_SIZE_X , REGION_SIZE_Z);
 	}
 	
 	public static RegionHolder getRegion(WorldObject obj)
@@ -113,11 +109,7 @@ public class WorldManager
 					ONLINE_CLIENTS.add(player.getClient());
 				}
 				
-				LOGGER.log(Level.INFO, "Player: {0} Account: {1} entered the world", new Object[]
-				{
-					player.getName(),
-					player.getClient().getAccountName()
-				});
+				LOGGER.info("Player: {} Account: {} entered the world",	player.getName(),player.getClient().getAccountName());
 			}
 		}
 	}
@@ -147,11 +139,7 @@ public class WorldManager
 			// Log world access.
 			if ((player.getClient().getActiveChar() != null))
 			{
-				LOGGER.log(Level.INFO, "Player: {0} Account: {1} left the world", new Object[]
-				{
-					player.getName(),
-					player.getClient().getAccountName()
-				});
+				LOGGER.info("Player: {} Account: {} left the world",player.getName(),player.getClient().getAccountName());
 			}
 		}
 		

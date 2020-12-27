@@ -1,7 +1,8 @@
 package com.gameserver.network;
 
 import java.security.MessageDigest;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -16,7 +17,7 @@ import com.gameserver.Config;
  */
 public class Encryption
 {
-	private static final Logger LOGGER = Logger.getLogger(Encryption.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(Encryption.class.getName());
 	
 	// Secret keyword.
 	private static final String PASSWORD = "SECRET_KEYWORD";

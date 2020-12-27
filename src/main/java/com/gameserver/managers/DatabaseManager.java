@@ -1,7 +1,8 @@
 package com.gameserver.managers;
 
 import java.sql.Connection;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.Config;
 import com.google.inject.Singleton;
@@ -13,7 +14,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Singleton
 public class DatabaseManager implements IDatabaseManager
 {
-	private static final Logger LOGGER = Logger.getLogger(DatabaseManager.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(DatabaseManager.class.getName());
 	
 	private static final HikariDataSource _hds = new HikariDataSource();
 	
@@ -54,7 +55,7 @@ public class DatabaseManager implements IDatabaseManager
 			}
 			catch (Exception e)
 			{
-				LOGGER.severe("DatabaseManager: Cound not get a connection. " + e);
+				LOGGER.fatal("DatabaseManager: Cound not get a connection. {}", e);
 			}
 		}
 		return con;
@@ -68,7 +69,7 @@ public class DatabaseManager implements IDatabaseManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.severe("DatabaseManager: There was a problem closing the data source. " + e);
+			LOGGER.error("DatabaseManager: There was a problem closing the data source. {}", e);
 		}
 	}
 }
