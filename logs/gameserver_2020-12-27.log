@@ -1,0 +1,206 @@
+[DEBUG]2020-12-27 21:27:50.384[main] com.zaxxer.hikari.HikariConfig- Driver class com.mysql.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69
+[DEBUG]2020-12-27 21:27:50.393[main] com.zaxxer.hikari.HikariConfig- HikariPool-1 - configuration:
+[DEBUG]2020-12-27 21:27:50.396[main] com.zaxxer.hikari.HikariConfig- allowPoolSuspension.............false
+[DEBUG]2020-12-27 21:27:50.397[main] com.zaxxer.hikari.HikariConfig- autoCommit......................true
+[DEBUG]2020-12-27 21:27:50.397[main] com.zaxxer.hikari.HikariConfig- catalog.........................none
+[DEBUG]2020-12-27 21:27:50.397[main] com.zaxxer.hikari.HikariConfig- connectionInitSql...............none
+[DEBUG]2020-12-27 21:27:50.398[main] com.zaxxer.hikari.HikariConfig- connectionTestQuery.............none
+[DEBUG]2020-12-27 21:27:50.398[main] com.zaxxer.hikari.HikariConfig- connectionTimeout...............30000
+[DEBUG]2020-12-27 21:27:50.398[main] com.zaxxer.hikari.HikariConfig- dataSource......................none
+[DEBUG]2020-12-27 21:27:50.398[main] com.zaxxer.hikari.HikariConfig- dataSourceClassName.............none
+[DEBUG]2020-12-27 21:27:50.398[main] com.zaxxer.hikari.HikariConfig- dataSourceJNDI..................none
+[DEBUG]2020-12-27 21:27:50.399[main] com.zaxxer.hikari.HikariConfig- dataSourceProperties............{password=<masked>}
+[DEBUG]2020-12-27 21:27:50.399[main] com.zaxxer.hikari.HikariConfig- driverClassName................."com.mysql.jdbc.Driver"
+[DEBUG]2020-12-27 21:27:50.400[main] com.zaxxer.hikari.HikariConfig- exceptionOverrideClassName......none
+[DEBUG]2020-12-27 21:27:50.400[main] com.zaxxer.hikari.HikariConfig- healthCheckProperties...........{}
+[DEBUG]2020-12-27 21:27:50.400[main] com.zaxxer.hikari.HikariConfig- healthCheckRegistry.............none
+[DEBUG]2020-12-27 21:27:50.400[main] com.zaxxer.hikari.HikariConfig- idleTimeout.....................0
+[DEBUG]2020-12-27 21:27:50.401[main] com.zaxxer.hikari.HikariConfig- initializationFailTimeout.......1
+[DEBUG]2020-12-27 21:27:50.401[main] com.zaxxer.hikari.HikariConfig- isolateInternalQueries..........false
+[DEBUG]2020-12-27 21:27:50.401[main] com.zaxxer.hikari.HikariConfig- jdbcUrl.........................jdbc:mysql://localhost/edws?useUnicode=true&characterEncoding=utf-8&useSSL=false
+[DEBUG]2020-12-27 21:27:50.402[main] com.zaxxer.hikari.HikariConfig- leakDetectionThreshold..........0
+[DEBUG]2020-12-27 21:27:50.402[main] com.zaxxer.hikari.HikariConfig- maxLifetime.....................1800000
+[DEBUG]2020-12-27 21:27:50.402[main] com.zaxxer.hikari.HikariConfig- maximumPoolSize.................50
+[DEBUG]2020-12-27 21:27:50.402[main] com.zaxxer.hikari.HikariConfig- metricRegistry..................none
+[DEBUG]2020-12-27 21:27:50.402[main] com.zaxxer.hikari.HikariConfig- metricsTrackerFactory...........none
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- minimumIdle.....................50
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- password........................<masked>
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- poolName........................"HikariPool-1"
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- readOnly........................false
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- registerMbeans..................false
+[DEBUG]2020-12-27 21:27:50.403[main] com.zaxxer.hikari.HikariConfig- scheduledExecutor...............none
+[DEBUG]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariConfig- schema..........................none
+[DEBUG]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariConfig- threadFactory...................internal
+[DEBUG]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariConfig- transactionIsolation............default
+[DEBUG]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariConfig- username........................"root"
+[DEBUG]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariConfig- validationTimeout...............5000
+[INFO ]2020-12-27 21:27:50.404[main] com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+[WARN ]2020-12-27 21:27:50.412[main] com.zaxxer.hikari.util.DriverDataSource- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+[DEBUG]2020-12-27 21:27:50.413[main] com.zaxxer.hikari.util.DriverDataSource- Driver class com.mysql.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69
+[DEBUG]2020-12-27 21:27:50.635[main] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47a64f7d
+[INFO ]2020-12-27 21:27:50.637[main] com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+[DEBUG]2020-12-27 21:27:50.737[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+[DEBUG]2020-12-27 21:27:50.750[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20291749
+[DEBUG]2020-12-27 21:27:50.753[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61141d72
+[DEBUG]2020-12-27 21:27:50.757[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@503f1f66
+[DEBUG]2020-12-27 21:27:50.760[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13be23d
+[DEBUG]2020-12-27 21:27:50.764[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37ae7957
+[DEBUG]2020-12-27 21:27:50.767[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5751fbf
+[DEBUG]2020-12-27 21:27:50.771[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3542e01c
+[DEBUG]2020-12-27 21:27:50.776[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@740154cf
+[DEBUG]2020-12-27 21:27:50.794[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c0dbd3
+[DEBUG]2020-12-27 21:27:50.797[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5876e18c
+[DEBUG]2020-12-27 21:27:50.799[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f64391
+[DEBUG]2020-12-27 21:27:50.802[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a6457b8
+[DEBUG]2020-12-27 21:27:50.804[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c48047e
+[DEBUG]2020-12-27 21:27:50.808[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c601ea9
+[DEBUG]2020-12-27 21:27:50.811[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54170d3
+[DEBUG]2020-12-27 21:27:50.813[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15a12fe3
+[DEBUG]2020-12-27 21:27:50.817[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77cc7bf1
+[DEBUG]2020-12-27 21:27:50.824[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d18e088
+[DEBUG]2020-12-27 21:27:50.827[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a165b8a
+[DEBUG]2020-12-27 21:27:50.830[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5110ddcc
+[DEBUG]2020-12-27 21:27:50.833[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a72658d
+[DEBUG]2020-12-27 21:27:50.839[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15b1737f
+[DEBUG]2020-12-27 21:27:50.846[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bf346c1
+[DEBUG]2020-12-27 21:27:50.865[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@769efdd3
+[DEBUG]2020-12-27 21:27:50.871[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25e4c351
+[DEBUG]2020-12-27 21:27:50.877[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e8cb3c7
+[DEBUG]2020-12-27 21:27:50.880[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4be5bcb9
+[DEBUG]2020-12-27 21:27:50.884[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@422fbf7a
+[DEBUG]2020-12-27 21:27:50.892[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c5c4715
+[DEBUG]2020-12-27 21:27:50.898[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b71e2d7
+[DEBUG]2020-12-27 21:27:50.901[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e2ed68e
+[DEBUG]2020-12-27 21:27:50.903[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cdbd0c7
+[DEBUG]2020-12-27 21:27:50.909[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36b4fabf
+[DEBUG]2020-12-27 21:27:50.913[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b1e28bd
+[DEBUG]2020-12-27 21:27:50.915[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@127a1fa8
+[DEBUG]2020-12-27 21:27:50.918[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dba3c7f
+[DEBUG]2020-12-27 21:27:50.921[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f46db37
+[DEBUG]2020-12-27 21:27:50.924[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@499d1627
+[DEBUG]2020-12-27 21:27:50.926[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@253e3aa9
+[DEBUG]2020-12-27 21:27:50.929[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45a3824c
+[DEBUG]2020-12-27 21:27:50.931[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bf50601
+[DEBUG]2020-12-27 21:27:50.934[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2451378
+[DEBUG]2020-12-27 21:27:50.937[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a837ebc
+[DEBUG]2020-12-27 21:27:50.940[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31b6d65f
+[DEBUG]2020-12-27 21:27:50.942[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64d4776a
+[DEBUG]2020-12-27 21:27:50.944[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e5c629e
+[DEBUG]2020-12-27 21:27:50.947[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6081cac2
+[DEBUG]2020-12-27 21:27:50.959[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e269683
+[DEBUG]2020-12-27 21:27:50.962[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b6e5a49
+[DEBUG]2020-12-27 21:27:50.962[HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - After adding stats (total=50, active=0, idle=50, waiting=0)
+[INFO ]2020-12-27 21:27:51.227[main] com.gameserver.data.SkillData- SkillData: Loaded 0 skills.
+[INFO ]2020-12-27 21:27:51.233[main] com.gameserver.data.ItemData- ItemData: Loaded 32 items.
+[INFO ]2020-12-27 21:27:51.235[main] com.gameserver.data.NpcData- NpcData: Loaded 2 NPCs.
+[DEBUG]2020-12-27 21:27:51.307[main] io.netty.util.internal.logging.InternalLoggerFactory- Using SLF4J as the default logging framework
+[DEBUG]2020-12-27 21:27:51.313[main] io.netty.channel.MultithreadEventLoopGroup- -Dio.netty.eventLoopThreads: 16
+[DEBUG]2020-12-27 21:27:51.327[main] io.netty.util.internal.InternalThreadLocalMap- -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[DEBUG]2020-12-27 21:27:51.327[main] io.netty.util.internal.InternalThreadLocalMap- -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[DEBUG]2020-12-27 21:27:51.332[main] io.netty.channel.nio.NioEventLoop- -Dio.netty.noKeySetOptimization: false
+[DEBUG]2020-12-27 21:27:51.332[main] io.netty.channel.nio.NioEventLoop- -Dio.netty.selectorAutoRebuildThreshold: 512
+[DEBUG]2020-12-27 21:27:51.346[main] io.netty.util.internal.PlatformDependent0- -Dio.netty.noUnsafe: false
+[DEBUG]2020-12-27 21:27:51.346[main] io.netty.util.internal.PlatformDependent0- Java version: 11
+[DEBUG]2020-12-27 21:27:51.347[main] io.netty.util.internal.PlatformDependent0- sun.misc.Unsafe.theUnsafe: available
+[DEBUG]2020-12-27 21:27:51.348[main] io.netty.util.internal.PlatformDependent0- sun.misc.Unsafe.copyMemory: available
+[DEBUG]2020-12-27 21:27:51.348[main] io.netty.util.internal.PlatformDependent0- java.nio.Buffer.address: available
+[DEBUG]2020-12-27 21:27:51.349[main] io.netty.util.internal.PlatformDependent0- direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238) ~[netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at com.gameserver.GameServer.run(GameServer.java:115) [classes/:?]
+	at com.gameserver.GameServer.main(GameServer.java:53) [classes/:?]
+[DEBUG]2020-12-27 21:27:51.360[main] io.netty.util.internal.PlatformDependent0- java.nio.Bits.unaligned: available, true
+[DEBUG]2020-12-27 21:27:51.362[main] io.netty.util.internal.PlatformDependent0- jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @4b0b0854
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:558) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352) ~[netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52) [netty-all-4.1.56.Final.jar:4.1.56.Final]
+	at com.gameserver.GameServer.run(GameServer.java:115) [classes/:?]
+	at com.gameserver.GameServer.main(GameServer.java:53) [classes/:?]
+[DEBUG]2020-12-27 21:27:51.363[main] io.netty.util.internal.PlatformDependent0- java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[DEBUG]2020-12-27 21:27:51.363[main] io.netty.util.internal.PlatformDependent- sun.misc.Unsafe: available
+[DEBUG]2020-12-27 21:27:51.364[main] io.netty.util.internal.PlatformDependent- maxDirectMemory: 8388608000 bytes (maybe)
+[DEBUG]2020-12-27 21:27:51.364[main] io.netty.util.internal.PlatformDependent- -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG]2020-12-27 21:27:51.364[main] io.netty.util.internal.PlatformDependent- -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG]2020-12-27 21:27:51.365[main] io.netty.util.internal.PlatformDependent- -Dio.netty.maxDirectMemory: -1 bytes
+[DEBUG]2020-12-27 21:27:51.365[main] io.netty.util.internal.PlatformDependent- -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[DEBUG]2020-12-27 21:27:51.366[main] io.netty.util.internal.CleanerJava9- java.nio.ByteBuffer.cleaner(): available
+[DEBUG]2020-12-27 21:27:51.366[main] io.netty.util.internal.PlatformDependent- -Dio.netty.noPreferDirect: false
+[DEBUG]2020-12-27 21:27:51.376[main] io.netty.util.internal.PlatformDependent- org.jctools-core.MpscChunkedArrayQueue: available
+[TRACE]2020-12-27 21:27:51.379[main] io.netty.channel.nio.NioEventLoop- instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1948ea69
+[TRACE]2020-12-27 21:27:51.381[main] io.netty.channel.nio.NioEventLoop- instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@746cd757
+[TRACE]2020-12-27 21:27:51.381[main] io.netty.channel.nio.NioEventLoop- instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@ae372b9
+[DEBUG]2020-12-27 21:27:51.401[main] io.netty.util.ResourceLeakDetector- -Dio.netty.leakDetection.level: simple
+[DEBUG]2020-12-27 21:27:51.401[main] io.netty.util.ResourceLeakDetector- -Dio.netty.leakDetection.targetRecords: 4
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.numHeapArenas: 16
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.numDirectArenas: 16
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.pageSize: 8192
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.maxOrder: 11
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.chunkSize: 16777216
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.smallCacheSize: 256
+[DEBUG]2020-12-27 21:27:51.403[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.normalCacheSize: 64
+[DEBUG]2020-12-27 21:27:51.404[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG]2020-12-27 21:27:51.404[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG]2020-12-27 21:27:51.404[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[DEBUG]2020-12-27 21:27:51.404[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.useCacheForAllThreads: true
+[DEBUG]2020-12-27 21:27:51.404[main] io.netty.buffer.PooledByteBufAllocator- -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[DEBUG]2020-12-27 21:27:51.420[main] io.netty.channel.DefaultChannelId- -Dio.netty.processId: 23581 (auto-detected)
+[DEBUG]2020-12-27 21:27:51.424[main] io.netty.util.NetUtil- -Djava.net.preferIPv4Stack: false
+[DEBUG]2020-12-27 21:27:51.424[main] io.netty.util.NetUtil- -Djava.net.preferIPv6Addresses: false
+[DEBUG]2020-12-27 21:27:51.427[main] io.netty.util.NetUtilInitializations- Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG]2020-12-27 21:27:51.428[main] io.netty.util.NetUtil- /proc/sys/net/core/somaxconn: 4096
+[DEBUG]2020-12-27 21:27:51.429[main] io.netty.channel.DefaultChannelId- -Dio.netty.machineId: f8:32:e4:ff:fe:86:bd:04 (auto-detected)
+[DEBUG]2020-12-27 21:27:51.451[main] io.netty.buffer.ByteBufUtil- -Dio.netty.allocator.type: pooled
+[DEBUG]2020-12-27 21:27:51.451[main] io.netty.buffer.ByteBufUtil- -Dio.netty.threadLocalDirectBufferSize: 0
+[DEBUG]2020-12-27 21:27:51.451[main] io.netty.buffer.ByteBufUtil- -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[DEBUG]2020-12-27 21:28:08.292[nioEventLoopGroup-3-1] io.netty.util.Recycler- -Dio.netty.recycler.maxCapacityPerThread: 4096
+[DEBUG]2020-12-27 21:28:08.292[nioEventLoopGroup-3-1] io.netty.util.Recycler- -Dio.netty.recycler.maxSharedCapacityFactor: 2
+[DEBUG]2020-12-27 21:28:08.292[nioEventLoopGroup-3-1] io.netty.util.Recycler- -Dio.netty.recycler.linkCapacity: 16
+[DEBUG]2020-12-27 21:28:08.292[nioEventLoopGroup-3-1] io.netty.util.Recycler- -Dio.netty.recycler.ratio: 8
+[DEBUG]2020-12-27 21:28:08.293[nioEventLoopGroup-3-1] io.netty.util.Recycler- -Dio.netty.recycler.delayedQueue.ratio: 8
+[DEBUG]2020-12-27 21:28:08.299[nioEventLoopGroup-3-1] io.netty.buffer.AbstractByteBuf- -Dio.netty.buffer.checkAccessible: true
+[DEBUG]2020-12-27 21:28:08.299[nioEventLoopGroup-3-1] io.netty.buffer.AbstractByteBuf- -Dio.netty.buffer.checkBounds: true
+[DEBUG]2020-12-27 21:28:08.300[nioEventLoopGroup-3-1] io.netty.util.ResourceLeakDetectorFactory- Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3f627628
+[INFO ]2020-12-27 21:28:08.328[nioEventLoopGroup-3-1] com.gameserver.network.packets.receivable.AccountAuthenticationRequest- Created account lajdghf.
+[DEBUG]2020-12-27 21:28:20.738[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+[DEBUG]2020-12-27 21:28:20.738[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[WARN ]2020-12-27 21:28:21.971[nioEventLoopGroup-3-1] com.gameserver.model.items.Inventory- null
+[DEBUG]2020-12-27 21:28:50.739[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+[DEBUG]2020-12-27 21:28:50.739[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[DEBUG]2020-12-27 21:29:20.740[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+[DEBUG]2020-12-27 21:29:20.740[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool- HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[WARN ]2020-12-27 21:29:29.938[nioEventLoopGroup-3-1] com.gameserver.model.items.Inventory- null
