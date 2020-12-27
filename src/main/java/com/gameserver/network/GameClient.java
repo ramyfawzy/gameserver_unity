@@ -51,79 +51,8 @@ public class GameClient extends SimpleChannelInboundHandler<byte[]>
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, byte[] bytes)
 	{
-//		for (var b : bytes)
-//		{
-//			System.out.print(b + " ");
-//		}
-//		System.out.println();
-//		for (var b : Encryption.decrypt(bytes))
-//		{
-//			System.out.print(b + " ");
-//		}
-//		System.out.println();
-//		System.out.println("-----------");
 		var packet = new ReceivablePacket(Encryption.decrypt(bytes));
-		switch (packet.readShort()) // Packet id.
-		{
-			case 1:
-				clientRequestHandlers.get(ClientRequestType.ACCOUNT_AUTHENTICATION.name()).handle(this, packet);
-				break;
-			
-			case 2:
-				clientRequestHandlers.get(ClientRequestType.CHARACTER_SELECTION_INFO.name()).handle(this, packet);
-				break;
-			
-			case 3:
-				clientRequestHandlers.get(ClientRequestType.CHARACTER_CREATION.name()).handle(this, packet);
-				break;
-			
-			case 4:
-				clientRequestHandlers.get(ClientRequestType.CHARACTER_DELETION.name()).handle(this, packet);
-				break;
-			
-			case 5:
-				clientRequestHandlers.get(ClientRequestType.CHARACTER_SLOT_UPDATE.name()).handle(this, packet);
-				break;
-			
-			case 6:
-				clientRequestHandlers.get(ClientRequestType.CHARACTER_SELECT_UPDATE.name()).handle(this, packet);
-				break;
-			
-			case 7:
-				clientRequestHandlers.get(ClientRequestType.ENTER_WORLD.name()).handle(this, packet);
-				break;
-			
-			case 8:
-				clientRequestHandlers.get(ClientRequestType.EXIT_WORLD.name()).handle(this, packet);
-				break;
-			
-			case 9:
-				clientRequestHandlers.get(ClientRequestType.LOCATION_UPDATE.name()).handle(this, packet);
-				break;
-			
-			case 10:
-				clientRequestHandlers.get(ClientRequestType.ANIMATOR_UPDATE.name()).handle(this, packet);
-				break;
-			
-			case 11:
-				clientRequestHandlers.get(ClientRequestType.OBJECT_INFO.name()).handle(this, packet);
-				break;
-			
-			case 12:
-				clientRequestHandlers.get(ClientRequestType.PLAYER_OPTIONS_UPDATE.name()).handle(this, packet);
-				break;
-			
-			case 13:
-				clientRequestHandlers.get(ClientRequestType.CHAT_REQUEST.name()).handle(this, packet);
-				break;
-			
-			case 14:
-				clientRequestHandlers.get(ClientRequestType.TARGET_UPDATE.name()).handle(this, packet);
-				break;
-			default:
-				LOGGER.error("Undefined Request -> {}", packet);
-				break;
-		}
+		clientRequestHandlers.get(ClientRequestType.findByPacketId(packet.readShort()).name()).handle(this, packet);
 	}
 	
 	@Override
