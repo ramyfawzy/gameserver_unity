@@ -50,13 +50,7 @@ public class GameServer
 		final Injector injector = Guice.createInjector(new ServerModule());
 		GameServer server = injector.getInstance(GameServer.class);
 	    server.run();
-//		new GameServer();
 	}
-	
-//	private GameServer() throws Exception
-//	{
-//		 
-//	}
 	
 	private void run() throws Exception{
 		

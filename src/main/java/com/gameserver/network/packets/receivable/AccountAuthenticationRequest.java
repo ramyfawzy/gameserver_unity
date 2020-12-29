@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.Config;
+import com.gameserver.dao.IAccountDao;
+import com.gameserver.dao.model.Account;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.managers.WorldManager;
 import com.gameserver.network.GameClient;
@@ -33,6 +35,9 @@ public class AccountAuthenticationRequest implements IRequestHandler {
 
 	@Inject
 	IDatabaseManager databaseManager;
+	
+	@Inject
+	IAccountDao accountDao;
 
 	@Override
 	public void handle(GameClient client, ReceivablePacket packet) {
@@ -64,19 +69,24 @@ public class AccountAuthenticationRequest implements IRequestHandler {
 		// Get data from database.
 		String storedPassword = "";
 		int status = STATUS_NOT_FOUND;
-		try (Connection con = databaseManager.getConnection();
-				PreparedStatement ps = con.prepareStatement(ACCOUNT_INFO_QUERY)) {
-			ps.setString(1, accountName);
-			try (ResultSet rset = ps.executeQuery()) {
-				while (rset.next()) {
-					storedPassword = rset.getString("password");
-					status = rset.getInt("status");
-				}
-			}
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage());
+		Account account;
+//		try (Connection con = databaseManager.getConnection();
+//				PreparedStatement ps = con.prepareStatement(ACCOUNT_INFO_QUERY)) {
+//			ps.setString(1, accountName);
+//			try (ResultSet rset = ps.executeQuery()) {
+//				while (rset.next()) {
+//					storedPassword = rset.getString("password");
+//					status = rset.getInt("status");
+//				}
+//			}
+//		} catch (Exception e) {
+//			LOGGER.error(e.getMessage());
+//		}
+		account = accountDao.findByAccountName(accountName);
+		if(account != null) {
+			storedPassword = account.getPassword();
+			status = account.getStatus();
 		}
-
 		// In case of auto create accounts configuration.
 		if ((status == 0) && Config.ACCOUNT_AUTO_CREATE) {
 			// Create account.
