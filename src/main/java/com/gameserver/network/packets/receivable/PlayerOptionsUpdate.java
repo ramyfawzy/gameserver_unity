@@ -3,13 +3,10 @@ package com.gameserver.network.packets.receivable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.network.GameClient;
 import com.gameserver.network.ReceivablePacket;
 import com.google.inject.Inject;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
 /**
  * @author ribrahim

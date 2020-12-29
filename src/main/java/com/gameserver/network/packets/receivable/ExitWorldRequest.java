@@ -3,7 +3,6 @@ package com.gameserver.network.packets.receivable;
 import com.gameserver.managers.WorldManager;
 import com.gameserver.network.GameClient;
 import com.gameserver.network.ReceivablePacket;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 /**

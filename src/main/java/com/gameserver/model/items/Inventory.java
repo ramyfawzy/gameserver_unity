@@ -10,10 +10,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.data.ItemData;
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.holders.ItemHolder;
-import com.google.inject.Inject;
 
 /**
  * @author Ramy Ibrahim

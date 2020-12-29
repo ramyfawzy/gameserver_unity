@@ -2,19 +2,18 @@ package com.gameserver.commands.admin;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import org.apache.logging.log4j.Logger;
+
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.gameserver.Config;
 import com.gameserver.managers.ChatManager;
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.WorldObject;
 import com.gameserver.model.actor.Npc;
 import com.gameserver.model.actor.Player;
 import com.gameserver.model.holders.LocationHolder;
 import com.gameserver.model.holders.SpawnHolder;
-import com.gameserver.network.packets.receivable.CharacterCreationRequest;
 import com.google.inject.Inject;
 
 /**

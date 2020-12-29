@@ -9,7 +9,6 @@ import com.gameserver.network.GameClient;
 import com.gameserver.network.ReceivablePacket;
 import com.gameserver.network.packets.sendable.LocationUpdate;
 import com.gameserver.network.packets.sendable.Logout;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 /**

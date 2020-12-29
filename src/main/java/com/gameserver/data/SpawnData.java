@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
-import com.gameserver.managers.DatabaseManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.actor.Monster;
 import com.gameserver.model.actor.Npc;

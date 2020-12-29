@@ -4,11 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.actor.Player;
 import com.gameserver.network.SendablePacket;
-import com.google.inject.Inject;
 
 /**
  * @author ribrahim

@@ -3,7 +3,6 @@ package com.gameserver.network;
 import java.util.Map;
 
 import com.gameserver.network.packets.receivable.IRequestHandler;
-import com.google.inject.Inject;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

@@ -3,8 +3,6 @@ package com.gameserver.managers;
 import java.util.List;
 
 import com.gameserver.Config;
-import com.gameserver.commands.admin.DeleteCommand;
-import com.gameserver.commands.admin.SpawnCommand;
 import com.gameserver.commands.player.LocCommand;
 import com.gameserver.commands.player.ReturnCommand;
 import com.gameserver.commands.player.TellCommand;

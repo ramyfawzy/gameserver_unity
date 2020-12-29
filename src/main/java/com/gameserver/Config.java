@@ -90,6 +90,12 @@ public final class Config
 	public static float WORLD_MINIMUM_Z;
 	public static float WORLD_MAXIMUM_Z;
 	
+	
+	// --------------------------------------------------
+	// Game XML Configs folder paths
+	// --------------------------------------------------
+	public static final String NPC_CONFIGS_FOLDER = "gameserver/xml/npc";
+	
 	public static void load()
 	{
 		

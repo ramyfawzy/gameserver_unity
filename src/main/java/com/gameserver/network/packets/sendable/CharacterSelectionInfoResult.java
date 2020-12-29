@@ -5,14 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
-import com.gameserver.managers.DatabaseManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.holders.CharacterDataHolder;
 import com.gameserver.network.SendablePacket;
-import com.google.inject.Inject;
 
 /**
  * @author Ramy Ibrahim

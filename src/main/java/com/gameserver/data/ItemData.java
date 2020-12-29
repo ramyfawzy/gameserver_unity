@@ -10,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.enums.ItemSlot;
 import com.gameserver.enums.ItemType;
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.holders.ItemTemplateHolder;
 import com.gameserver.model.holders.SkillHolder;

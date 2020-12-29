@@ -11,7 +11,6 @@ import com.gameserver.network.ReceivablePacket;
 import com.gameserver.network.packets.sendable.AnimatorUpdate;
 import com.gameserver.network.packets.sendable.NpcInformation;
 import com.gameserver.network.packets.sendable.PlayerInformation;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 /**

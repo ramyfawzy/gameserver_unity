@@ -6,9 +6,6 @@ import com.gameserver.network.ReceivablePacket;
 import com.gameserver.network.packets.sendable.CharacterSelectionInfoResult;
 import com.google.inject.Inject;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-
 /**
  * @author Ramy Ibrahim
  */

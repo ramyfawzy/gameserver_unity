@@ -14,7 +14,6 @@ import com.gameserver.network.packets.sendable.PlayerInventoryUpdate;
 import com.gameserver.network.packets.sendable.PlayerOptionsInformation;
 import com.google.inject.Inject;
 
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 /**

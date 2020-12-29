@@ -7,13 +7,11 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import com.gameserver.Config;
-import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.model.holders.LocationHolder;
 import com.gameserver.model.items.Inventory;
 import com.gameserver.network.GameClient;
 import com.gameserver.network.SendablePacket;
-import com.google.inject.Inject;
 
 /**
  * @author Ramy Ibrahim

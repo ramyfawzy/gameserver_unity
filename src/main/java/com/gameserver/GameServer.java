@@ -21,6 +21,7 @@ import com.gameserver.managers.WorldManager;
 import com.gameserver.network.ClientInitializer;
 import com.gameserver.network.Encryption;
 import com.gameserver.network.packets.receivable.IRequestHandler;
+import com.gameserver.xml.parser.NpcConfigsParser;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
@@ -83,6 +84,9 @@ public class GameServer
 		
 		LOGGER.info("Initializing Spawn Data ...");
 		spawnData.init();
+		
+		NpcConfigsParser npcConfigsParser = new NpcConfigsParser();
+		var npcConfigs = npcConfigsParser.loadNpcConfigs();
 		
 		// Post info.
 		LOGGER.info("Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
