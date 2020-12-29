@@ -12,6 +12,7 @@ import com.gameserver.managers.DatabaseManager;
 import com.gameserver.managers.IDatabaseManager;
 import com.gameserver.network.packets.receivable.*;
 import com.gameserver.network.packets.receivable.IRequestHandler;
+import com.gameserver.xml.parser.NpcConfigsCache;
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.MapBinder;
 import static com.gameserver.enums.ClientRequestType.*;
@@ -41,6 +42,8 @@ public class ServerModule extends AbstractModule {
 		clientRequestHandlersBinder.addBinding(PLAYER_OPTIONS_UPDATE.name()).to(PlayerOptionsUpdate.class).asEagerSingleton();
 		clientRequestHandlersBinder.addBinding(CHAT_REQUEST.name()).to(ChatRequest.class).asEagerSingleton();
 		clientRequestHandlersBinder.addBinding(TARGET_UPDATE.name()).to(TargetUpdateRequest.class).asEagerSingleton();
+		
+		bind(NpcConfigsCache.class);
 
 	}
 

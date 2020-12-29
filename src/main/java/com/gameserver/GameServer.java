@@ -21,7 +21,7 @@ import com.gameserver.managers.WorldManager;
 import com.gameserver.network.ClientInitializer;
 import com.gameserver.network.Encryption;
 import com.gameserver.network.packets.receivable.IRequestHandler;
-import com.gameserver.xml.parser.NpcConfigsParser;
+import com.gameserver.xml.parser.NpcConfigsCache;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
@@ -45,6 +45,9 @@ public class GameServer
 	INpcData npcData;
 	@Inject
 	Map<String, IRequestHandler> clientRequestHandlers;
+	
+	@Inject
+	NpcConfigsCache npcConfigsCache;
 	
 	public static void main(String[] args) throws Exception
 	{
@@ -85,8 +88,9 @@ public class GameServer
 		LOGGER.info("Initializing Spawn Data ...");
 		spawnData.init();
 		
-		NpcConfigsParser npcConfigsParser = new NpcConfigsParser();
-		var npcConfigs = npcConfigsParser.loadNpcConfigs();
+		npcConfigsCache.loadNpcConfigs();
+		
+		LOGGER.info("Loaded NPC Xml definitions {} files", npcConfigsCache.getNpcConfigsMap().size());
 		
 		// Post info.
 		LOGGER.info("Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
